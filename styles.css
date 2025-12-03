@@ -127,11 +127,69 @@ body {
   gap: 12px;
 }
 
+/* Day 切換按鈕 */
+.day-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.day-tab {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.day-tab.active {
+  background: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
 #day-header {
   background: #fff;
   border-radius: 12px;
   padding: 14px 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* 上方住宿＋天氣橫幅 */
+.day-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.banner-label {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.day-banner a {
+  text-decoration: none;
+  color: #2563eb;
+  font-size: 12px;
+}
+
+.banner-weather {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.weather-icon {
+  font-size: 16px;
+}
+
+.weather-text {
+  font-size: 12px;
 }
 
 .day-title {
@@ -219,6 +277,13 @@ body {
   margin-top: 2px;
 }
 
+.block-meta a {
+  margin-left: 4px;
+  text-decoration: none;
+  color: #2563eb;
+  font-size: 11px;
+}
+
 .meals-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -260,7 +325,13 @@ body {
   .layout {
     flex-direction: column;
   }
+
   .sidebar {
     width: 100%;
+  }
+
+  .day-banner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
