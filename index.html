@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>我的行程本｜Sydney Diary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>我的行程本｜Sydney Diary</h1>
+      <p class="subtitle">輸入密碼才能查看行程</p>
+    </header>
+
+    <main>
+      <!-- 登入區 -->
+      <section id="login-section">
+        <div class="card">
+          <label for="password-input">密碼</label>
+          <input id="password-input" type="password" placeholder="請輸入密碼（20252025）" />
+          <button id="login-button">登入</button>
+          <p id="login-error" class="error-message"></p>
+        </div>
+      </section>
+
+      <!-- App 主畫面 -->
+      <section id="app-section" class="hidden">
+        <div class="layout">
+          <aside class="sidebar">
+            <h2>旅程列表</h2>
+            <ul id="trip-list"></ul>
+          </aside>
+          <section class="content">
+            <div id="day-header"></div>
+            <div id="day-schedule"></div>
+            <div id="day-meals"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
